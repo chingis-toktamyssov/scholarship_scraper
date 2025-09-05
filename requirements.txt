@@ -1,0 +1,3 @@
+selenium
+requests
+PyPDF2
