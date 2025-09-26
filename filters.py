@@ -32,7 +32,9 @@ def escape(driver):
 def fillFilters(driver):
     clickButton("//button[contains(., 'Filters')]", 'Filters', driver)
     clickButton("//mat-form-field[contains(., 'Select Faculty')]", 'Select Faculty', driver)
-    clickButton("//mat-option[contains(., ' Faculty of Engineering ')]", ' Faculty of Engineering ', driver)
+    # clickButton("//mat-option[contains(., ' Faculty of Engineering ')]", ' Faculty of Engineering ', driver)
+    clickButton("//mat-option[contains(., ' Faculty of Science ')]", ' Faculty of Science ', driver)
+
     
     escape(driver)
 
@@ -70,8 +72,9 @@ def filterPDF(driver):
         if href and href.endswith(".pdf"):
             pdf_links.append(href)
 
-    output_file = "passed.txt"
-    key_words = ['Biomedical', 'Chemical', 'Métis', 'welfare', "Francophone", "First Nation", 'sports', "athlete", 'French', 'soccer', 'women', 'woman', 'Gee-Gee', 'third', 'fourth', 'international', 'Indigenous', 'Jewish']
+    output_file = "filtered.txt"
+    # key_words = ['Biomedical', 'Chemical', 'Métis', 'welfare', "Francophone", "First Nation", 'sports', "athlete", 'French', 'soccer', 'women', 'woman', 'Gee-Gee', 'third', 'fourth', 'international', 'Indigenous', 'Jewish']
+    key_words = ['Physics', 'Métis', 'welfare', "Francophone", "First Nation", 'sports', "athlete", 'French', 'soccer', 'Gee-Gee', 'third', 'fourth', 'international', 'Indigenous', 'Jewish']
 
     for link in pdf_links:        
 
