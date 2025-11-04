@@ -9,17 +9,19 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.service import Service
 
 from filters import fillFilters, clickButton, filterPDF
 
 url = "https://uottawa.syntosolution.com/general-directory"
 
 options = webdriver.ChromeOptions()
-options.binary_location = "/usr/bin/brave"
+options.binary_location = "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe"
+
 driver = webdriver.Chrome(options=options)
 
 driver.get(url)
-time.sleep(0.5)
+time.sleep(3)
 
 fillFilters(driver)
 time.sleep(0.5)
